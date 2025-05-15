@@ -274,3 +274,27 @@ Usage: sam local invoke [OPTIONS] [FUNCTION_LOGICAL_ID]
 Try 'sam local invoke -h' for help.
 
 Error: Invalid value for '--env-vars' / '-n': Path '.env.json' does not exist.
+Usage: sam local invoke [OPTIONS] [FUNCTION_LOGICAL_ID]
+Try 'sam local invoke -h' for help.
+
+Error: Invalid value for '--env-vars' / '-n': Path '.env.json' does not exist.
+Usage: sam local invoke [OPTIONS] [FUNCTION_LOGICAL_ID]
+Try 'sam local invoke -h' for help.
+
+Error: Invalid value for '--env-vars' / '-n': Path '.env.json' does not exist.
+Usage: sam local invoke [OPTIONS] [FUNCTION_LOGICAL_ID]
+Try 'sam local invoke -h' for help.
+
+Error: Invalid value for '--env-vars' / '-n': Path '.env.json' does not exist.
+Usage: sam local invoke [OPTIONS] [FUNCTION_LOGICAL_ID]
+Try 'sam local invoke -h' for help.
+
+Error: Invalid value for '--env-vars' / '-n': Path '.env.json' does not exist.
+Usage: sam local invoke [OPTIONS] [FUNCTION_LOGICAL_ID]
+Try 'sam local invoke -h' for help.
+
+Error: Invalid value for '--env-vars' / '-n': Path '.env.json' does not exist.
+Usage: sam local invoke [OPTIONS] [FUNCTION_LOGICAL_ID]
+Try 'sam local invoke -h' for help.
+
+Error: Invalid value for '--env-vars' / '-n': Path '.env.json' does not exist.
