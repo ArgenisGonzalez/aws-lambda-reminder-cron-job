@@ -12,7 +12,7 @@ class ReminderEmailService {
       secure: true,
       auth: {
         user: process.env.SENDER_EMAIL,
-        pass: "Your own application password",
+        pass: "gelrxemyempdjxum",
       },
     });
   }

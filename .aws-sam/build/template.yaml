@@ -8,7 +8,7 @@ Resources:
       Handler: src/handlers/send-reminders-cron.notifyReminderHandler
       Runtime: nodejs18.x
       MemorySize: 128
-      Timeout: 10
+      Timeout: 30
       Environment:
         Variables:
           REMINDER_TABLE: REMINDER_TABLE

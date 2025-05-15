@@ -1,7 +1,7 @@
 // @ts-ignore
 import { DynamoDBClient, ScanCommand } from "@aws-sdk/client-dynamodb";
+import { DeleteCommand, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
 // @ts-ignore
-import { DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
 import reminderEmailService from "../utils/emailService.js";
 const client = new DynamoDBClient({
   region: "us-east-1",
@@ -44,6 +44,16 @@ export const notifyReminderHandler = async (event) => {
           receiverEmail,
           reminder.description?.S,
           `${reminder.duration?.N} minutes`
+        );
+
+        //Remove the reminder for the database
+        await ddbDocClient.send(
+          new DeleteCommand({
+            TableName: tableName,
+            Key: {
+              id: reminder.id?.S,
+            },
+          })
         );
       }
     }
