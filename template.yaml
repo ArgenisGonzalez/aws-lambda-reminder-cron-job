@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: reminder-cron-job
+
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+  notifyReminderFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/handlers/send-reminders-cron.notifyReminderHandler
+      Runtime: nodejs18.x
+      MemorySize: 128
+      Timeout: 30
+      Environment:
+        Variables:
+          REMINDER_TABLE: REMINDER_TABLE
+          SENDER_EMAIL: arggon18@gmail.com
+          RECEIVER_EMAIL: arggon01@gmail.com
+      Policies:
+        - DynamoDBReadPolicy:
+            TableName: REMINDER_TABLE
+      Events:
+        Schedule:
+          Type: Schedule
+          Properties:
+            Schedule: rate(1 minute)
+    Metadata:
+      BuildMethod: makefile
